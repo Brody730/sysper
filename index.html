@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir archivo CSV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="file"] {
+            margin: 10px 0;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Subir archivo CSV</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="csv_file" id="csv_file" accept=".csv" required>
+            <button type="submit">Subir y Procesar</button>
+        </form>
+        <div id="response"></div>
+    </div>
+
+    <!-- Enlaza el archivo JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
